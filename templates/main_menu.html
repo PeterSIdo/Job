@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Care Records</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        #header {
+            background-color: lightgray;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #menu {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Care Records</h1>
+    </div>
+    <div>  <p id="datetime"></p></div>
+  
+    <div id="menu">
+  
+    <div id="menu">
+  
+    <div id="menu">
+
+    <div id="menu">
+        <a href="unit.html">Unit</a>
+        <a href="residents.html">Residents Name</a>
+        <a href="cardex.html">Cardex</a>
+        <a href="logout.html">Logout</a>
+    </div>
+
+    <script>
+        function updateDateTime() {
+            const datetimeElement = document.getElementById("datetime");
+            const now = new Date();
+            const date = now.toLocaleDateString("en-GB");
+            const time = now.toLocaleTimeString("en-GB");
+            datetimeElement.textContent = `Date: ${date}, Time: ${time}`;
+        }
+
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+
+</html>

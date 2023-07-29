@@ -5,7 +5,7 @@ app = Flask(__name__) # this app is simply an object of class Flask
 JOBS =[
   {
     'id': 1,
-    'title': 'Data Analyst',
+    'title': 'Adat Analyst',
     'location': 'Edinburgh, Scotland',
     'salary': '£50,000'
   },
@@ -34,7 +34,7 @@ JOBS =[
 
 @app.route("/")
 def hello_world():
-    return render_template('home.html', 
+    return render_template('main_menu.html', 
                            jobs = JOBS)
 
 if __name__ == '__main__':
